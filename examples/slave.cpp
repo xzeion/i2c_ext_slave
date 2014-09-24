@@ -11,25 +11,24 @@
 // This example code is in the public domain.
 
 
-//#include <Wire.h>
+#include <Wire.h>
+#include <wireextender_slave.h>
 
+WireExtenderS ext;
 
 void setup()
 {
       Serial.begin(9600);
       pinMode(13,OUTPUT);
-  //    Wire.begin(2);                // join i2c bus with address #2
-    //  Wire.onRequest(requestEvent); // register event
 }
 
 void loop()
 {
       digitalWrite(13,HIGH);
-      delay(500);
+      delay(100);
       digitalWrite(13,LOW);
-      delay(500);
-      Serial.println("Hello World");
-
+      delay(100);
+      Serial.println("Slave is working");       
 }
 
 // function that executes whenever data is requested by master

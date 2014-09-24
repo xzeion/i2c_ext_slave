@@ -6,13 +6,13 @@ teensy = Teensy(
 	version=3.1,
 	env=env,
 	build_dir='bin',
-    src_dir='src',
+    src_dir='.',
 )
 
 # Set to 24000000, 48000000, or 96000000 to set CPU core speed
 teensy.cpu(speed=96000000)
 
-teensy.libs('/usr/share/arduino/libraries/Wire','.')
+teensy.libs('Wire','../')
 
 # (Teensy)
 # For key layouts, set to US_ENGLISH, CANADIAN_FRENCH, CANADIAN_MULTILINGUAL, DANISH, FINNISH, FRENCH, FRENCH_BELGIAN, FRENCH_SWISS, 
