@@ -2,7 +2,7 @@
 // Wire Slave Sender
 // by Nicholas Zambetti <http://www.zambetti.com>
 
-// Demonstrates use of the Wire library
+// Demonstrates use of the Wire libraryk
 // Sends data as an I2C/TWI slave device
 // Refer to the "Wire Master Reader" example for use with this
 
@@ -22,19 +22,15 @@ void setup()
       pinMode(13,OUTPUT);
 }
 
+int count;
 void loop()
 {
-      digitalWrite(13,HIGH);
-      delay(100);
-      digitalWrite(13,LOW);
-      delay(100);
-      Serial.println("Slave is working");       
+     // digitalWrite(13,HIGH);
+     // delay(100);
+     // digitalWrite(13,LOW);
+     // delay(100);
+     // Serial.print("Slave is working: ");       
+     // count++;
+     // Serial.println(count);
 }
 
-// function that executes whenever data is requested by master
-// this function is registered as an event, see setup()
-//void requestEvent()
-//{
-//      Wire.write("hello "); // respond with message of 6 bytes
-                             // as expected by master
-//}
