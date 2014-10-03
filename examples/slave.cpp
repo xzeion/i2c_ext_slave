@@ -14,12 +14,15 @@
 #include <Wire.h>
 #include <wireextender_slave.h>
 
-WireExtenderS ext;
 
 void setup()
 {
+      weSlave.begin(2);
       Serial.begin(9600);
       pinMode(13,OUTPUT);
+      weSlave.value = 5.0;
+      weSlave.minValue = 0;
+      weSlave.maxValue = 10;
 }
 
 int count;

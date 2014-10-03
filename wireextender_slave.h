@@ -5,12 +5,13 @@
 
 class WireExtenderS{
     public:
-        WireExtenderS();
-        ~WireExtenderS();
-        void parse();
-        void register_write();
-        void register_select();    
-
+        void begin(int addr);
+        #define REGISTER(n,name,type) type name;
+        #include "test.reg"
+        #undef REGISTER
 
 };
+
+extern WireExtenderS weSlave;
+
 #endif
